@@ -1,2 +1,16 @@
-# DEVNET-2775 Parking System
- # Firebase Cloud Functions Repository  This repository contains an example of Firebase Cloud Functions implemented for a parking management system.  ## Features  The cloud functions in this repository provide the following functionalities:  1. **getCollectionData**: Fetch all data from a specified Firestore collection. 2. **addtoqueue**: Add a new message to the 'messages' Firestore collection. 3. **addUser**: Register a new user and add the details to the 'users' Firestore collection. 4. **nextInQueue**: Process the next entry in the 'queue' Firestore collection and make a POST request to a specified webhook with user details. 5. **mvresponse**: Process the response from MV, group the data by parking bay, and store the result in the 'parkingfrommv' Firestore collection. 6. **checkParkingStatus**: Check and update the status of parking bays based on the data in the 'parkingfrommv' Firestore collection.  ## Setup  To get started with this code, clone the repository, and set up Firebase and Firestore in your project. Also, ensure that you have set the proper environment variables for your Firebase region and webhook URL.  ## Tech Stack  This project is built using Node.js and Google Firebase, including Firestore and Cloud Functions.  ## Contribution  Feel free to create an issue or submit a pull request if you find a bug or want to contribute to the project. Please follow the existing code style for any contributions.
+# Firebase Cloud Functions for Parking Management
+
+This repository contains Firebase Cloud Functions for a parking management system, built using Node.js and Google Firebase.
+
+**Features:**
+
+1. **getCollectionData**: Fetches data from a specified Firestore collection.
+2. **addtoqueue**: Adds a new message to the 'messages' Firestore collection.
+3. **addUser**: Registers new users to the 'users' Firestore collection.
+4. **nextInQueue**: Processes next entry in the 'queue' collection and posts user details to a webhook.
+5. **mvresponse**: Processes MV response, groups data by parking bay, and stores results in the 'parkingfrommv' collection.
+6. **checkParkingStatus**: Updates the status of parking bays based on 'parkingfrommv' data.
+
+To get started, clone the repository and set up Firebase and Firestore. Ensure you've set environment variables for Firebase region and webhook URL.
+
+Contributions are welcome. Please follow the existing code style for any contributions.
