@@ -1,5 +1,7 @@
 const {onRequest} = require("firebase-functions/v2/https");
 const {getFirestore} = require('firebase-admin/firestore');
+const writeParkingStatus = require('./writeParkingStatus');
+
 
 /**
  * Determines which parking quadrant the subject is in based on the given coordinates.
@@ -44,6 +46,10 @@ const mvresponse = onRequest(async (req, res) => {
   }
 
   res.status(200).send(groupedData);
+  
+  // Call writeParkingStatus() to update parking status based on new data
+  await writeParkingStatus();
+  
 });
 
 module.exports = mvresponse;
